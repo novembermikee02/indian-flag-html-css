@@ -1,0 +1,97 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.indian-flag {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+}
+
+.indian-flag .color-yellow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 33vh;
+    background: #ff9933;
+    transform: scaleX(0);
+    animation: color-yellow-1 1s linear forwards;
+    transform-origin: left;
+}
+
+@keyframes color-yellow-1 {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.indian-flag .color-blue {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 33vh;
+    background: #138808;
+    transform: scaleX(0);
+    animation: color-blue-1 1s linear forwards;
+    transform-origin: right;
+    animation-delay: 1s;
+}
+
+@keyframes color-blue-1 {
+    0% {
+        transform: scaleX(0);
+    }
+
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.ashoka-chakra {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    z-index: 1;
+    animation: fadeIn 0.5s linear forwards;
+    animation-delay: 2s;
+}
+
+@keyframes fadeIn {
+    0% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 1;
+    }
+}
+
+.ashoka-chakra img {
+    height: 34vh;
+    margin-top: 1vh;
+    animation: rotate 20s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
